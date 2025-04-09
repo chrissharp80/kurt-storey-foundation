@@ -1,0 +1,167 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User model
+model User {
+  id        String     @id @default(cuid())
+  name      String
+  email     String     @unique
+  role      UserRole   @default(APPLICANT)
+  status    UserStatus @default(ACTIVE)
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  deletedAt DateTime? // Soft delete
+
+  // Relations
+  reviewedApplications Application[] @relation("ReviewedBy")
+  auditLogs            AuditLog[]
+
+  @@index([email])
+}
+
+// Application model
+model Application {
+  id                   String            @id @default(cuid())
+  message              String
+  instrumentPreference String
+  status               ApplicationStatus @default(PENDING)
+  token                String            @unique
+  tokenExpiresAt       DateTime
+  tokenRevoked         Boolean           @default(false)
+  createdAt            DateTime          @default(now())
+  updatedAt            DateTime          @updatedAt
+
+  // Relations
+  reviewedBy            User?                  @relation("ReviewedBy", fields: [reviewedById], references: [id])
+  reviewedById          String?
+  instrumentAssignments InstrumentAssignment[]
+
+  @@index([token])
+  @@index([status])
+}
+
+// Instrument model
+model Instrument {
+  id         String              @id @default(cuid())
+  type       String
+  brand      String
+  condition  InstrumentCondition
+  status     InstrumentStatus    @default(AVAILABLE)
+  donorName  String?
+  donorEmail String?
+  createdAt  DateTime            @default(now())
+  updatedAt  DateTime            @updatedAt
+
+  // Relations
+  assignments InstrumentAssignment[]
+
+  @@index([status])
+  @@index([type])
+}
+
+// InstrumentAssignment model for tracking history
+model InstrumentAssignment {
+  id         String           @id @default(cuid())
+  status     AssignmentStatus @default(ASSIGNED)
+  assignedAt DateTime         @default(now())
+  revokedAt  DateTime?
+  notes      String?
+
+  // Relations
+  instrument    Instrument  @relation(fields: [instrumentId], references: [id])
+  instrumentId  String
+  application   Application @relation(fields: [applicationId], references: [id])
+  applicationId String
+
+  @@index([status])
+}
+
+// AuditLog model
+model AuditLog {
+  id         String   @id @default(cuid())
+  action     String
+  details    String
+  entityType String
+  entityId   String
+  createdAt  DateTime @default(now())
+
+  // Relations
+  user   User   @relation(fields: [userId], references: [id])
+  userId String
+
+  @@index([entityType, entityId])
+  @@index([action])
+}
+
+// EmailLog model
+model EmailLog {
+  id         String      @id @default(cuid())
+  to         String
+  subject    String
+  body       String
+  status     EmailStatus @default(PENDING)
+  retryCount Int         @default(0)
+  sentAt     DateTime?
+  failedAt   DateTime?
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+
+  @@index([status])
+  @@index([to])
+}
+
+// Enums
+enum UserRole {
+  ADMIN
+  APPLICANT
+}
+
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+}
+
+enum ApplicationStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  ASSIGNED
+  COMPLETED
+}
+
+enum InstrumentCondition {
+  EXCELLENT
+  GOOD
+  FAIR
+  NEEDS_REPAIR
+}
+
+enum InstrumentStatus {
+  AVAILABLE
+  ASSIGNED
+  REVOKED
+  NEEDS_REPAIR
+}
+
+enum AssignmentStatus {
+  ASSIGNED
+  REVOKED
+  COMPLETED
+}
+
+enum EmailStatus {
+  PENDING
+  SENT
+  FAILED
+  RETRY
+}
