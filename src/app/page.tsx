@@ -1,103 +1,74 @@
-import Image from "next/image";
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="space-y-12">
+      <section className="text-center py-12">
+        <h1 className="text-4xl font-bold mb-4">Kurt Storey Foundation</h1>
+        <p className="text-xl max-w-3xl mx-auto text-gray-600">
+          Connecting instruments with kids who need them, continuing Kurt&apos;s legacy of giving.
+        </p>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section className="bg-indigo-50 p-8 rounded-lg">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
+          <p className="text-lg mb-6">
+            The Kurt Storey Foundation exists to provide musical instruments to children who cannot afford them,
+            carrying forward Kurt&apos;s passion for music and giving.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6 mt-8">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-3">Request an Instrument</h3>
+              <p className="mb-4">Need an instrument? We&apos;re here to help. Apply today.</p>
+              <Link href="/apply" className="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">
+                Apply Now
+              </Link>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-3">Browse Our Catalog</h3>
+              <p className="mb-4">See what instruments are currently available in our inventory.</p>
+              <Link href="/catalog" className="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">
+                View Catalog
+              </Link>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-3">Learn About Kurt</h3>
+              <p className="mb-4">Discover the story behind our foundation and Kurt&apos;s legacy.</p>
+              <Link href="/why" className="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">
+                Why Kurt?
+              </Link>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      <section className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold mb-6">How It Works</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="text-center">
+            <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl font-bold text-indigo-700">1</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Apply</h3>
+            <p>Fill out our simple application form to request an instrument.</p>
+          </div>
+          <div className="text-center">
+            <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl font-bold text-indigo-700">2</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Review</h3>
+            <p>Our team reviews applications and matches them with available instruments.</p>
+          </div>
+          <div className="text-center">
+            <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl font-bold text-indigo-700">3</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Receive</h3>
+            <p>Approved applicants receive their instruments and start making music!</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
