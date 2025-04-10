@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found - Kurt Storey Foundation</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #3a3a3a;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f7f2;
+      background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M10,10 L90,10 L90,90 L10,90 Z" stroke="%23d9c9b1" stroke-width="0.5" fill="none" opacity="0.3"/></svg>');
+      background-size: 20px 20px;
+    }
+    h1 {
+      color: #8b5a2b;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+      border-bottom: 2px solid #d9c9b1;
+      padding-bottom: 15px;
+    }
+    h2 {
+      color: #5e8b2b;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+    p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+    .cta {
+      background-color: #8b5a2b;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .cta:hover {
+      background-color: #6d4520;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .container {
+      background-color: #ffffff;
+      padding: 35px;
+      border-radius: 10px;
+      margin-top: 30px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-top: 5px solid #8b5a2b;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 50px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    nav a {
+      margin: 0 20px;
+      color: #8b5a2b;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      padding: 5px 0;
+    }
+    nav a:hover {
+      color: #5e8b2b;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #5e8b2b;
+      transition: width 0.3s ease;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+    .links a {
+      padding: 12px 24px;
+      background-color: #f9f7f2;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #8b5a2b;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: 1px solid #d9c9b1;
+    }
+    .links a:hover {
+      background-color: #f0e8d9;
+      color: #5e8b2b;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .music-icon {
+      display: block;
+      text-align: center;
+      margin: 20px auto;
+      font-size: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Kurt Storey Foundation</h1>
+  
+  <nav>
+    <a href="/index.html">Home</a>
+    <a href="/why.html">Why Kurt?</a>
+    <a href="/apply.html">Apply</a>
+    <a href="/catalog.html">Catalog</a>
+  </nav>
+  
+  <div class="container">
+    <div class="music-icon">🎵</div>
+    <h2>404 - Page Not Found</h2>
+    
+    <p>The page you are looking for doesn't exist or has been moved.</p>
+    
+    <p>You might want to check out these pages instead:</p>
+    
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/why">Why Kurt?</a>
+      <a href="/apply">Apply</a>
+      <a href="/catalog">Catalog</a>
+    </div>
+    
+    <a href="/" class="cta" style="margin-top: 30px;">Return to Home</a>
+  </div>
+</body>
+</html>

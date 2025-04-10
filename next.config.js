@@ -3,19 +3,13 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  output: 'standalone',
+  output: 'export',
+  distDir: 'out',
   trailingSlash: true,
   images: {
-    domains: [],
-    remotePatterns: [],
     unoptimized: true,
   },
-  experimental: {
-    serverActions: {
-      bodySizeLimit: '2mb',
-    },
-  },
-  serverExternalPackages: ['@prisma/client'],
+  basePath: '',
   reactStrictMode: false,
 };
 
