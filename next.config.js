@@ -4,14 +4,15 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   output: 'standalone',
-  distDir: '.next',
   trailingSlash: true,
   images: {
     domains: [],
     remotePatterns: [],
     unoptimized: process.env.NODE_ENV === 'production',
   },
-  serverExternalPackages: ['@prisma/client'],
+  experimental: {
+    serverComponentsExternalPackages: ['@prisma/client'],
+  },
   reactStrictMode: false,
 };
 

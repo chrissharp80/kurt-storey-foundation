@@ -4,17 +4,6 @@
   "buildCommand": "next build",
   "installCommand": "npm install",
   "regions": ["iad1"],
-  "public": false,
-  "outputDirectory": ".next",
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "x-vercel-protection-bypass",
-          "value": "true"
-        }
-      ]
-    }
-  ]
+  "public": true,
+  "outputDirectory": ".next"
 }
