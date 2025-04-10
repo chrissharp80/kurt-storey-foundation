@@ -1,16 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "next build",
   "framework": "nextjs",
-  "outputDirectory": ".next",
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ]
+  "buildCommand": "next build",
+  "installCommand": "npm install",
+  "regions": ["iad1"],
+  "public": false
 }
