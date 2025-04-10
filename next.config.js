@@ -11,11 +11,11 @@ const nextConfig = {
     unoptimized: true,
   },
   experimental: {
-    serverExternalPackages: ['@prisma/client'],
     serverActions: {
       bodySizeLimit: '2mb',
     },
   },
+  serverExternalPackages: ['@prisma/client'],
   reactStrictMode: false,
 };
 
