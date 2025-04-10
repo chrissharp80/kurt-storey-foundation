@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function WhyPage() {
   return (
@@ -84,23 +85,23 @@ export default function WhyPage() {
           <div className="text-center">
             <h3 className="text-xl font-semibold mb-3">Donate</h3>
             <p className="mb-4">Contribute instruments or funds to help us reach more children.</p>
-            <a href="/donate" className="inline-block bg-white text-indigo-700 px-4 py-2 rounded hover:bg-gray-100">
+            <Link href="/donate" className="inline-block bg-white text-indigo-700 px-4 py-2 rounded hover:bg-gray-100">
               Donate Now
-            </a>
+            </Link>
           </div>
           <div className="text-center">
             <h3 className="text-xl font-semibold mb-3">Mentor</h3>
             <p className="mb-4">Share your musical knowledge with the next generation.</p>
-            <a href="/mentor" className="inline-block bg-white text-indigo-700 px-4 py-2 rounded hover:bg-gray-100">
+            <Link href="/mentor" className="inline-block bg-white text-indigo-700 px-4 py-2 rounded hover:bg-gray-100">
               Become a Mentor
-            </a>
+            </Link>
           </div>
           <div className="text-center">
             <h3 className="text-xl font-semibold mb-3">Spread the Word</h3>
             <p className="mb-4">Help us connect with more communities and expand our reach.</p>
-            <a href="/share" className="inline-block bg-white text-indigo-700 px-4 py-2 rounded hover:bg-gray-100">
+            <Link href="/share" className="inline-block bg-white text-indigo-700 px-4 py-2 rounded hover:bg-gray-100">
               Share Our Story
-            </a>
+            </Link>
           </div>
         </div>
       </section>
