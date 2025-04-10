@@ -3,11 +3,13 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  distDir: '.next',
+  output: 'standalone',
   images: {
-    unoptimized: true,
+    domains: [],
+    remotePatterns: [],
   },
-  trailingSlash: true,
+  trailingSlash: false,
+  reactStrictMode: false,
 };
 
 module.exports = nextConfig;
