@@ -76,11 +76,11 @@ export default async function CatalogPage() {
         <div className="bg-gray-50 p-8 rounded-lg text-center">
           <p className="text-lg text-gray-600 mb-4">No instruments are currently available.</p>
           <p className="text-gray-600">
-            Please check back later or 
+            Please check back later or&nbsp;
             <Link href="/donate" className="text-indigo-600 hover:underline mx-1">
               consider donating an instrument
             </Link>
-            to help our cause.
+            &nbsp;to help our cause.
           </p>
         </div>
       )}
