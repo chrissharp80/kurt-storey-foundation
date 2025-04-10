@@ -1,16 +1,8 @@
 {
   "version": 2,
-  "framework": "nextjs",
-  "buildCommand": "next build",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "regions": ["iad1"],
-  "public": true,
-  "outputDirectory": ".next",
-  "routes": [
-    { "src": "/(.*)", "dest": "/$1" }
-  ],
-  "github": {
-    "silent": true
-  },
-  "ignoreCommand": "echo 'Skipping deployment protection checks'"
+  "framework": "nextjs",
+  "outputDirectory": ".next"
 }
