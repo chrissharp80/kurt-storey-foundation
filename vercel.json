@@ -1,16 +1,20 @@
 {
   "version": 2,
-  "buildCommand": "next build",
   "framework": "nextjs",
+  "buildCommand": "next build",
+  "installCommand": "npm install",
+  "regions": ["iad1"],
+  "public": false,
   "outputDirectory": ".next",
-  "routes": [
+  "headers": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "x-vercel-protection-bypass",
+          "value": "true"
+        }
+      ]
     }
   ]
 }
