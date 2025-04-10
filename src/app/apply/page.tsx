@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function ApplyPage() {
   const router = useRouter();
@@ -159,7 +160,7 @@ export default function ApplyPage() {
           
           <div className="mt-8 text-sm text-gray-500">
             <p>
-              By submitting this form, you agree to our <a href="/privacy" className="text-indigo-600 hover:underline">Privacy Policy</a>.
+              By submitting this form, you agree to our <Link href="/privacy" className="text-indigo-600 hover:underline">Privacy Policy</Link>.
               We respect your privacy and will only use your information to process your application.
             </p>
           </div>
