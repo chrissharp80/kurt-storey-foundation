@@ -3,8 +3,7 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  output: 'export',
-  distDir: '.next',
+  output: 'standalone',
   trailingSlash: true,
   images: {
     domains: [],

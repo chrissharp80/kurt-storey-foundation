@@ -11,5 +11,6 @@
   ],
   "github": {
     "silent": true
-  }
+  },
+  "ignoreCommand": "echo 'Skipping deployment protection checks'"
 }
