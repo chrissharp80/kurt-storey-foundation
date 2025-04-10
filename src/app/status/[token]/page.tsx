@@ -108,7 +108,7 @@ export default function StatusPage() {
       <div className="max-w-3xl mx-auto text-center py-12">
         <h1 className="text-3xl font-bold mb-4">Application Not Found</h1>
         <p className="mb-6 text-gray-600">
-          We couldn't find an application with this token. It may have expired or been removed.
+          We couldn&apos;t find an application with this token. It may have expired or been removed.
         </p>
         <Link 
           href="/apply" 
