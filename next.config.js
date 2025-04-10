@@ -3,15 +3,16 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  output: 'server',
+  output: 'export',
   images: {
-    domains: [],
-    remotePatterns: [],
+    unoptimized: true,
   },
-  experimental: {
-    serverComponentsExternalPackages: ['@prisma/client'],
-  },
+  trailingSlash: true,
   reactStrictMode: false,
+  assetPrefix: process.env.NODE_ENV === 'production' ? undefined : undefined,
+  experimental: {
+    serverActions: false,
+  },
 };
 
 module.exports = nextConfig;
