@@ -90,7 +90,7 @@ export default function AdminPage() {
     if (status === 'authenticated' && session?.user?.role === 'ADMIN') {
       fetchData();
     }
-  }, [status, session, fetchData]);
+  }, [status, session, activeTab, fetchData]);
 
   const handleAssignInstrument = async (applicationId: string, instrumentId: string) => {
     try {
