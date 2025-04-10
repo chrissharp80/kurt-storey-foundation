@@ -67,14 +67,14 @@ export default function WhyPage() {
               &quot;Kurt gave me my first guitar when I was 12. I couldn&apos;t afford lessons, so he taught me himself.
               Twenty years later, I&apos;m teaching music to kids in the same neighborhood.&quot;
             </p>
-            <p className="font-semibold">— Michael Torres, Music Teacher</p>
+            <p className="font-semibold">&mdash; Michael Torres, Music Teacher</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md">
             <p className="italic mb-4">
-              &quot;What made Kurt special wasn&apos;t just that he gave instruments away - it was how he made you feel
+              &quot;What made Kurt special wasn&apos;t just that he gave instruments away &mdash; it was how he made you feel
               like you deserved them. Like making music wasn&apos;t a privilege, but a right.&quot;
             </p>
-            <p className="font-semibold">— Sarah Johnson, Professional Musician</p>
+            <p className="font-semibold">&mdash; Sarah Johnson, Professional Musician</p>
           </div>
         </div>
       </section>
