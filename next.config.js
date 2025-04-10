@@ -3,15 +3,11 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  output: 'standalone',
+  output: 'export',
+  distDir: 'out',
   trailingSlash: true,
   images: {
     unoptimized: true,
-  },
-  experimental: {
-    serverActions: {
-      bodySizeLimit: '2mb',
-    },
   },
   reactStrictMode: false,
 };
