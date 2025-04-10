@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -56,13 +56,7 @@ export default function AdminPage() {
     }
   }, [status, session, router]);
 
-  useEffect(() => {
-    if (status === 'authenticated' && session?.user?.role === 'ADMIN') {
-      fetchData();
-    }
-  }, [status, session, activeTab]);
-
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     setLoading(true);
     setError('');
     
@@ -90,7 +84,7 @@ export default function AdminPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [activeTab]);
 
   const handleAssignInstrument = async (applicationId: string, instrumentId: string) => {
     try {

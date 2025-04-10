@@ -40,7 +40,7 @@ export default function WhyPage() {
       </section>
 
       <section className="bg-indigo-50 p-8 rounded-lg">
-        <h2 className="text-3xl font-bold mb-6">Kurt's Story</h2>
+        <h2 className="text-3xl font-bold mb-6">Kurt&apos;s Story</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <p className="mb-4">
