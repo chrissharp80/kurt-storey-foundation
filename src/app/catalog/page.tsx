@@ -36,7 +36,7 @@ export default async function CatalogPage() {
       
       <p className="mb-8 text-gray-600">
         Browse our available instruments. These instruments have been donated to the Kurt Storey Foundation
-        and are available for applicants. If you'd like to request an instrument, please 
+        and are available for applicants. If you&apos;d like to request an instrument, please 
         <Link href="/apply" className="text-indigo-600 hover:underline mx-1">apply here</Link>.
       </p>
       
@@ -88,8 +88,8 @@ export default async function CatalogPage() {
       <div className="mt-12 bg-indigo-50 p-6 rounded-lg">
         <h2 className="text-xl font-semibold mb-4">Have an instrument to donate?</h2>
         <p className="mb-4">
-          If you have an instrument you'd like to donate to the Kurt Storey Foundation,
-          we'd love to hear from you. Your donation can help a child discover the joy of music.
+          If you have an instrument you&apos;d like to donate to the Kurt Storey Foundation,
+          we&apos;d love to hear from you. Your donation can help a child discover the joy of music.
         </p>
         <Link 
           href="/donate" 
