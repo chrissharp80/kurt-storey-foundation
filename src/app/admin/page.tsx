@@ -85,6 +85,12 @@ export default function AdminPage() {
       setLoading(false);
     }
   }, [activeTab]);
+  
+  useEffect(() => {
+    if (status === 'authenticated' && session?.user?.role === 'ADMIN') {
+      fetchData();
+    }
+  }, [status, session, fetchData]);
 
   const handleAssignInstrument = async (applicationId: string, instrumentId: string) => {
     try {
