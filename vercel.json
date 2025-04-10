@@ -6,15 +6,17 @@
   "framework": null,
   "outputDirectory": "out",
   "trailingSlash": false,
-  "cleanUrls": true,
+  "cleanUrls": false,
   "routes": [
     { "src": "/_next/static/(.*)", "dest": "/_next/static/$1", "headers": { "cache-control": "public,max-age=31536000,immutable" } },
     { "src": "/static/(.*)", "dest": "/static/$1", "headers": { "cache-control": "public,max-age=31536000,immutable" } },
     { "handle": "filesystem" },
     { "src": "/404", "status": 404, "dest": "/404.html" },
-    { "src": "/why", "dest": "/why.html" },
-    { "src": "/apply", "dest": "/apply.html" },
-    { "src": "/catalog", "dest": "/catalog.html" },
-    { "src": "/(.*)", "dest": "/$1" }
+    { "src": "^/why$", "dest": "/why.html" },
+    { "src": "^/apply$", "dest": "/apply.html" },
+    { "src": "^/catalog$", "dest": "/catalog.html" },
+    { "src": "^/$", "dest": "/index.html" },
+    { "src": "/(.*)", "dest": "/$1.html", "continue": true },
+    { "src": "/(.*)", "status": 404, "dest": "/404.html" }
   ]
 }
