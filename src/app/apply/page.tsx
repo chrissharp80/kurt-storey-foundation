@@ -63,7 +63,7 @@ export default function ApplyPage() {
       ) : (
         <>
           <p className="mb-6 text-gray-600">
-            Fill out the form below to request an instrument. We'll review your application and get back to you as soon as possible.
+            Fill out the form below to request an instrument. We&apos;ll review your application and get back to you as soon as possible.
           </p>
           
           {error && (
@@ -101,7 +101,7 @@ export default function ApplyPage() {
                 required
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
-              <p className="mt-1 text-sm text-gray-500">We'll use this to update you on your application status.</p>
+              <p className="mt-1 text-sm text-gray-500">We&apos;ll use this to update you on your application status.</p>
             </div>
             
             <div>
@@ -140,7 +140,7 @@ export default function ApplyPage() {
                 required
                 rows={4}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                placeholder="Tell us a bit about yourself, why you're interested in this instrument, and any specific needs you might have."
+                placeholder="Tell us a bit about yourself, why you&apos;re interested in this instrument, and any specific needs you might have."
               ></textarea>
             </div>
             
