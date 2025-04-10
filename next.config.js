@@ -11,7 +11,7 @@ const nextConfig = {
     unoptimized: true,
   },
   experimental: {
-    serverComponentsExternalPackages: ['@prisma/client'],
+    serverExternalPackages: ['@prisma/client'],
     serverActions: {
       bodySizeLimit: '2mb',
     },
