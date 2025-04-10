@@ -13,16 +13,16 @@ export default function WhyPage() {
       <section>
         <div className="prose prose-lg max-w-none">
           <p className="text-lg">
-            Kurt Storey didn't care about status. He cared about getting instruments to kids who couldn't afford them.
-            He didn't wait for permission. He acted — with heart, with hustle, and with humility.
+            Kurt Storey didn&apos;t care about status. He cared about getting instruments to kids who couldn&apos;t afford them.
+            He didn&apos;t wait for permission. He acted — with heart, with hustle, and with humility.
           </p>
           
           <blockquote className="border-l-4 border-indigo-500 pl-4 italic my-8">
-            "Kurt never talked about access. He just handed someone a guitar and said, 'Play.'"
+            &quot;Kurt never talked about access. He just handed someone a guitar and said, &apos;Play.&apos;&quot;
           </blockquote>
           
           <p>
-            The platform reflects that ethos. It's not just a website. It's a tool to:
+            The platform reflects that ethos. It&apos;s not just a website. It&apos;s a tool to:
           </p>
           
           <ul className="list-disc pl-6 space-y-2">
@@ -63,15 +63,15 @@ export default function WhyPage() {
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-white p-6 rounded-lg shadow-md">
             <p className="italic mb-4">
-              "Kurt gave me my first guitar when I was 12. I couldn't afford lessons, so he taught me himself.
-              Twenty years later, I'm teaching music to kids in the same neighborhood."
+              &quot;Kurt gave me my first guitar when I was 12. I couldn&apos;t afford lessons, so he taught me himself.
+              Twenty years later, I&apos;m teaching music to kids in the same neighborhood.&quot;
             </p>
             <p className="font-semibold">— Michael Torres, Music Teacher</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md">
             <p className="italic mb-4">
-              "What made Kurt special wasn't just that he gave instruments away - it was how he made you feel
-              like you deserved them. Like making music wasn't a privilege, but a right."
+              &quot;What made Kurt special wasn&apos;t just that he gave instruments away - it was how he made you feel
+              like you deserved them. Like making music wasn&apos;t a privilege, but a right.&quot;
             </p>
             <p className="font-semibold">— Sarah Johnson, Professional Musician</p>
           </div>
