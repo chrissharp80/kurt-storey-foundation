@@ -36,10 +36,30 @@
       border-radius: 10px;
       margin-top: 30px;
     }
+    nav {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #4338ca;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <h1>Kurt Storey Foundation</h1>
+  
+  <nav>
+    <a href="/">Home</a>
+    <a href="/why.html">Why Kurt?</a>
+    <a href="/apply.html">Apply</a>
+    <a href="/catalog.html">Catalog</a>
+  </nav>
   
   <p>Welcome to the Kurt Storey Foundation. We're connecting instruments with kids who need them, continuing Kurt's legacy of giving.</p>
   
@@ -49,7 +69,7 @@
     
     <p>This is a static fallback page. The full site is currently being configured.</p>
     
-    <a href="/why" class="cta">Learn More About Kurt</a>
+    <a href="/why.html" class="cta">Learn More About Kurt</a>
   </div>
 </body>
 </html>
