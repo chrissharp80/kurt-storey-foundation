@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { getServerSession } from "next-auth";
-import Providers from "@/components/Providers";
+import Providers from "../components/Providers";
+import Link from "next/link";
+import React from "react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,19 +29,19 @@ export default async function RootLayout({
           <div className="min-h-screen flex flex-col">
             <header className="bg-indigo-700 text-white shadow-md">
               <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-                <a href="/" className="text-2xl font-bold">Kurt Storey Foundation</a>
+                <Link href="/" className="text-2xl font-bold">Kurt Storey Foundation</Link>
                 <nav className="space-x-4">
-                  <a href="/" className="hover:underline">Home</a>
-                  <a href="/why" className="hover:underline">Why Kurt?</a>
-                  <a href="/apply" className="hover:underline">Apply</a>
-                  <a href="/catalog" className="hover:underline">Catalog</a>
+                  <Link href="/" className="hover:underline">Home</Link>
+                  <Link href="/why" className="hover:underline">Why Kurt?</Link>
+                  <Link href="/apply" className="hover:underline">Apply</Link>
+                  <Link href="/catalog" className="hover:underline">Catalog</Link>
                   {session?.user?.role === 'ADMIN' && (
-                    <a href="/admin" className="hover:underline">Admin</a>
+                    <Link href="/admin" className="hover:underline">Admin</Link>
                   )}
                   {session ? (
-                    <a href="/api/auth/signout" className="hover:underline">Sign Out</a>
+                    <Link href="/api/auth/signout" className="hover:underline">Sign Out</Link>
                   ) : (
-                    <a href="/login" className="hover:underline">Admin Login</a>
+                    <Link href="/login" className="hover:underline">Admin Login</Link>
                   )}
                 </nav>
               </div>
@@ -54,9 +56,9 @@ export default async function RootLayout({
                     <p className="text-gray-600">© {new Date().getFullYear()} Kurt Storey Foundation</p>
                   </div>
                   <div className="flex space-x-4">
-                    <a href="/governance" className="text-gray-600 hover:text-indigo-700">Governance</a>
-                    <a href="/privacy" className="text-gray-600 hover:text-indigo-700">Privacy</a>
-                    <a href="/contact" className="text-gray-600 hover:text-indigo-700">Contact</a>
+                    <Link href="/governance" className="text-gray-600 hover:text-indigo-700">Governance</Link>
+                    <Link href="/privacy" className="text-gray-600 hover:text-indigo-700">Privacy</Link>
+                    <Link href="/contact" className="text-gray-600 hover:text-indigo-700">Contact</Link>
                   </div>
                 </div>
               </div>
