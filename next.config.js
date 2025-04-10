@@ -8,11 +8,14 @@ const nextConfig = {
   images: {
     domains: [],
     remotePatterns: [],
-    unoptimized: process.env.NODE_ENV === 'production',
+    unoptimized: true,
   },
   experimental: {
-    serverComponentsExternalPackages: ['@prisma/client'],
+    serverActions: {
+      bodySizeLimit: '2mb',
+    },
   },
+  serverExternalPackages: ['@prisma/client'],
   reactStrictMode: false,
 };
 
