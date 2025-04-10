@@ -152,7 +152,7 @@ export default function StatusPage() {
           {application.status === 'PENDING' && (
             <div className="bg-yellow-50 p-4 rounded-md">
               <p className="text-sm text-yellow-800">
-                Your application is currently being reviewed. We'll update this status when there's any change.
+                Your application is currently being reviewed. We&apos;ll update this status when there&apos;s any change.
               </p>
             </div>
           )}
@@ -160,7 +160,7 @@ export default function StatusPage() {
           {application.status === 'APPROVED' && (
             <div className="bg-blue-50 p-4 rounded-md">
               <p className="text-sm text-blue-800">
-                Good news! Your application has been approved. We're now working on matching you with an instrument.
+                Good news! Your application has been approved. We&apos;re now working on matching you with an instrument.
               </p>
             </div>
           )}
@@ -168,7 +168,7 @@ export default function StatusPage() {
           {application.status === 'REJECTED' && (
             <div className="bg-red-50 p-4 rounded-md">
               <p className="text-sm text-red-800">
-                We're sorry, but we're unable to fulfill your request at this time. Please feel free to apply again in the future.
+                We&apos;re sorry, but we&apos;re unable to fulfill your request at this time. Please feel free to apply again in the future.
               </p>
             </div>
           )}
@@ -192,7 +192,7 @@ export default function StatusPage() {
           {application.status === 'COMPLETED' && (
             <div className="bg-purple-50 p-4 rounded-md">
               <p className="text-sm text-purple-800">
-                This application has been completed. We hope you're enjoying your instrument!
+                This application has been completed. We hope you&apos;re enjoying your instrument!
               </p>
             </div>
           )}
