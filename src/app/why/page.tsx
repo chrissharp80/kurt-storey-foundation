@@ -7,7 +7,7 @@ export default function WhyPage() {
       <section className="text-center">
         <h1 className="text-4xl font-bold mb-4">Why Kurt?</h1>
         <p className="text-xl text-gray-600">
-          This foundation — and this platform — exists because Kurt Storey lived music as a way of giving.
+          This foundation &mdash; and this platform &mdash; exists because Kurt Storey lived music as a way of giving.
         </p>
       </section>
 
@@ -15,7 +15,7 @@ export default function WhyPage() {
         <div className="prose prose-lg max-w-none">
           <p className="text-lg">
             Kurt Storey didn&apos;t care about status. He cared about getting instruments to kids who couldn&apos;t afford them.
-            He didn&apos;t wait for permission. He acted — with heart, with hustle, and with humility.
+            He didn&apos;t wait for permission. He acted &mdash; with heart, with hustle, and with humility.
           </p>
           
           <blockquote className="border-l-4 border-indigo-500 pl-4 italic my-8">
@@ -34,7 +34,7 @@ export default function WhyPage() {
           </ul>
           
           <p className="mt-6">
-            This page — /why — reminds us why the rest exists.
+            This page &mdash; /why &mdash; reminds us why the rest exists.
           </p>
         </div>
       </section>
@@ -50,7 +50,7 @@ export default function WhyPage() {
             </p>
             <p>
               His approach was simple but profound: remove barriers, provide opportunities, and let the music do the rest.
-              Kurt never sought recognition for his generosity - he simply wanted to share the joy of music with others.
+              Kurt never sought recognition for his generosity &mdash; he simply wanted to share the joy of music with others.
             </p>
           </div>
           <div className="bg-gray-200 rounded-lg flex items-center justify-center h-64">
