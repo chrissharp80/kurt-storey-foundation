@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  distDir: 'dist',
   images: {
-    unoptimized: true,
+    domains: [],
+    remotePatterns: [],
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 };
 
