@@ -5,5 +5,11 @@
   "installCommand": "npm install",
   "regions": ["iad1"],
   "public": true,
-  "outputDirectory": ".next"
+  "outputDirectory": ".next",
+  "routes": [
+    { "src": "/(.*)", "dest": "/$1" }
+  ],
+  "github": {
+    "silent": true
+  }
 }
