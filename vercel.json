@@ -22,13 +22,12 @@
     }
   ],
   "routes": [
-    { "handle": "filesystem" },
     { "src": "^/$", "dest": "/index.html" },
     { "src": "^/why/?$", "dest": "/why.html" },
     { "src": "^/apply/?$", "dest": "/apply.html" },
     { "src": "^/catalog/?$", "dest": "/catalog.html" },
     { "src": "^/images/(.*)$", "dest": "/images/$1" },
-    { "src": "^/404/?$", "dest": "/404.html" },
-    { "src": "/(.*)", "status": 404, "dest": "/404.html" }
+    { "handle": "filesystem" },
+    { "src": ".*", "status": 404, "dest": "/404.html" }
   ]
 }
