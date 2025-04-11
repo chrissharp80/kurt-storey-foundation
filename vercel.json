@@ -7,22 +7,13 @@
   "outputDirectory": "out",
   "trailingSlash": false,
   "cleanUrls": true,
-  "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/why", "destination": "/why.html" },
-    { "source": "/apply", "destination": "/apply.html" },
-    { "source": "/catalog", "destination": "/catalog.html" }
-  ],
-  "headers": [
-    {
-      "source": "/_next/static/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-      ]
-    }
-  ],
   "routes": [
+    { "src": "^/$", "dest": "/index.html" },
+    { "src": "^/why$", "dest": "/why.html" },
+    { "src": "^/apply$", "dest": "/apply.html" },
+    { "src": "^/catalog$", "dest": "/catalog.html" },
     { "handle": "filesystem" },
+    { "src": "/_next/static/(.*)", "headers": { "cache-control": "public,max-age=31536000,immutable" } },
     { "src": "/(.*)", "status": 404, "dest": "/404.html" }
   ]
 }
