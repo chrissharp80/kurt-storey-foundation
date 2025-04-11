@@ -9,12 +9,10 @@ const nextConfig = {
     unoptimized: true,
   },
   reactStrictMode: false,
-  experimental: {
-    appDir: true,
-  },
   typescript: {
     ignoreBuildErrors: true,
   },
+  trailingSlash: false,
 };
 
 module.exports = nextConfig;
