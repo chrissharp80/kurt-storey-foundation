@@ -10,8 +10,11 @@
     { "source": "/why", "destination": "/why.html" },
     { "source": "/apply", "destination": "/apply.html" },
     { "source": "/catalog", "destination": "/catalog.html" },
-    { "source": "/images/(.*)", "destination": "/images/$1" },
-    { "source": "/(.*)", "destination": "/404.html" }
+    { "source": "/images/(.*)", "destination": "/images/$1" }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "status": 404, "dest": "/404.html" }
   ],
   "headers": [
     {
