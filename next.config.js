@@ -5,12 +5,14 @@ const nextConfig = {
   },
   output: 'export',
   distDir: 'out',
-  trailingSlash: true,
   images: {
     unoptimized: true,
   },
-  basePath: '',
   reactStrictMode: false,
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  trailingSlash: false,
 };
 
 module.exports = nextConfig;

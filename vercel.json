@@ -1,23 +1,4 @@
 {
-  "version": 2,
   "buildCommand": "npm run build",
-  "devCommand": "npm run dev",
-  "installCommand": "npm install",
-  "framework": null,
-  "outputDirectory": "out",
-  "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/why", "destination": "/why.html" },
-    { "source": "/apply", "destination": "/apply.html" },
-    { "source": "/catalog", "destination": "/catalog.html" },
-    { "source": "/(.*)", "destination": "/404.html" }
-  ],
-  "headers": [
-    {
-      "source": "/_next/static/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-      ]
-    }
-  ]
+  "outputDirectory": "out"
 }
