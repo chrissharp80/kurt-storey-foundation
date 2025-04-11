@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
+  "buildCommand": "npm run build && cp out/404.html out/404/index.html",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": null,
@@ -28,6 +28,7 @@
     { "src": "^/catalog/?$", "dest": "/catalog.html" },
     { "src": "^/images/(.*)$", "dest": "/images/$1" },
     { "handle": "filesystem" },
+    { "src": "^/404/?$", "dest": "/404.html" },
     { "src": ".*", "status": 404, "dest": "/404.html" }
   ]
 }
