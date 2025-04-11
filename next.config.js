@@ -11,6 +11,17 @@ const nextConfig = {
   },
   basePath: '',
   reactStrictMode: false,
+  
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        destination: '/404.html',
+        permanent: false,
+        missing: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
