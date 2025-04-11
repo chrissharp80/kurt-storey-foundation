@@ -4,8 +4,5 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": null,
-  "outputDirectory": "out",
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "errorDocument": "404.html"
+  "outputDirectory": "out"
 }
