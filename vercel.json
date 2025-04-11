@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "framework": "nextjs",
+  "framework": null,
   "buildCommand": "npm run build",
   "outputDirectory": "out",
   "trailingSlash": false,
@@ -24,7 +24,8 @@
       ]
     }
   ],
-  "redirects": [
-    { "source": "/404", "destination": "/404.html", "statusCode": 404 }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/$1.html" },
+    { "source": "/", "destination": "/index.html" }
   ]
 }
