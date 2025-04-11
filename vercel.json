@@ -11,8 +11,7 @@
     { "source": "/", "destination": "/index.html" },
     { "source": "/why", "destination": "/why.html" },
     { "source": "/apply", "destination": "/apply.html" },
-    { "source": "/catalog", "destination": "/catalog.html" },
-    { "source": "/(.*)", "destination": "/404.html" }
+    { "source": "/catalog", "destination": "/catalog.html" }
   ],
   "headers": [
     {
@@ -21,5 +20,9 @@
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "status": 404, "dest": "/404.html" }
   ]
 }
