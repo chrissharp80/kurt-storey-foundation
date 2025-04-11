@@ -6,5 +6,8 @@
   "framework": null,
   "outputDirectory": "out",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/404.html", "missing": [{ "type": "file", "value": "404.html" }] }
+  ]
 }
