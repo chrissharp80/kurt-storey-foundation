@@ -5,10 +5,9 @@
   "installCommand": "npm install",
   "framework": null,
   "outputDirectory": "out",
-  "trailingSlash": false,
   "cleanUrls": true,
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "status": 404, "dest": "/404.html" }
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/404.html", "statusCode": 404 }
   ]
 }
