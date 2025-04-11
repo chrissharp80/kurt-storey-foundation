@@ -8,6 +8,6 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/((?!_next|images).*)", "destination": "/404.html", "has": [{ "type": "header", "key": "x-vercel-error", "value": "404" }] }
+    { "source": "/(.*)", "destination": "/404.html", "statusCode": 404 }
   ]
 }
