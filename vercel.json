@@ -5,16 +5,14 @@
   "installCommand": "npm install",
   "framework": null,
   "outputDirectory": "out",
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
     { "source": "/why", "destination": "/why.html" },
     { "source": "/apply", "destination": "/apply.html" },
     { "source": "/catalog", "destination": "/catalog.html" },
-    { "source": "/images/(.*)", "destination": "/images/$1" }
-  ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "status": 404, "dest": "/404.html" }
+    { "source": "/images/:path*", "destination": "/images/:path*" }
   ],
   "headers": [
     {
@@ -29,5 +27,6 @@
         { "key": "Cache-Control", "value": "public, max-age=86400" }
       ]
     }
-  ]
+  ],
+  "errorPage": "/404.html"
 }
